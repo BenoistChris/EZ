@@ -19,7 +19,7 @@ function loadListCountries() {
    jQuery('.toolbox-list-countries ul').html('');
    jQuery('#select-locale-field-options li').each(function() {
    if(jQuery(this).find('a').length>0) {
-   var marche = jQuery(this).find('.locale-row-title').text().replace("(EUR€)", "").text().replace("(UK£)", "").text().replace("(US$)", "").text().replace("(DHS)", "").replace("日本 (JPY¥)","Japan").replace("한국 (KRW₩)","Korea").replace("中国大陆 (CNY¥)","China").replace("香港特別行政區","Hong Kong - CN").replace("臺灣地區","Taiwan").replace("Hong Kong SAR","Hong-Kong - EN");
+   var marche = jQuery(this).find('.locale-row-title').text().replace("(EUR€)", "").replace("(UK£)", "").replace("(US$)", "").replace("(DHS)", "").replace("日本 (JPY¥)","Japan").replace("한국 (KRW₩)","Korea").replace("中国大陆 (CNY¥)","China").replace("香港特別行政區","Hong Kong - CN").replace("臺灣地區","Taiwan").replace("Hong Kong SAR","Hong-Kong - EN");
 jQuery('.toolbox-list-countries ul').append('<li><a href="' + jQuery(this).find('a').attr('href') + '">' + marche + '</a></li>');
    }
    });
