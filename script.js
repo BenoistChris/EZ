@@ -19,7 +19,7 @@ function loadListCountries() {
    jQuery('.toolbox-list-countries ul').html('');
    jQuery('#select-locale-field-options li').each(function() {
    if(jQuery(this).find('a').length>0) {
-jQuery('.toolbox-list-countries ul').append('<li>' + jQuery(this).find('a').attr('href') + '</li>');
+jQuery('.toolbox-list-countries ul').append('<li><a href="' + jQuery(this).find('a').attr('href') + '">' + jQuery(this).find('.locale-row-title').text() + '</a></li>');
    }
    });
 }
