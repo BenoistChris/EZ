@@ -11,8 +11,8 @@ jQuery('.toolbox-btn').mouseover(function(){
    jQuery('.toolbox-btn').fadeOut('fast');
 });
 jQuery('.toolbox').mouseout(function(){
-   jQuery(this).removeClass('toolbox-open');
-   jQuery('.toolbox-btn').fadeIn('fast');
+//   jQuery(this).removeClass('toolbox-open');
+//   jQuery('.toolbox-btn').fadeIn('fast');
 });
 
 function loadListCountries() {
