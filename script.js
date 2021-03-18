@@ -17,10 +17,12 @@ jQuery('.toolbox').mouseout(function(){
 
 jQuery('.toolbox').on('click', '#open-countries', function() {
 	jQuery('.toolbox-list-countries li').each(function() {
-window.open(
-   jQuery(this).find('a').attr('href'),
-  '_blank'
-);
+	if(jQuery(this).find('input').is(":checked")) {
+		window.open(
+		   jQuery(this).find('a').attr('href'),
+		  '_blank'
+		);
+	}
 	});
 });
 
