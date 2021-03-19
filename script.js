@@ -1,6 +1,6 @@
 var pathname = window.location.pathname;
 
-var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries"> > Ouvrir</a></p></div></div>';
+var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries"> > Ouvrir</a></p></div><div class="toolbox-close">⨯</div></div>';
 var html = html + '<div class="toolbox-btn">></div>';
 
 
@@ -10,10 +10,13 @@ jQuery('.toolbox-btn').mouseover(function(){
    jQuery('.toolbox').addClass('toolbox-open');
    jQuery('.toolbox-btn').fadeOut('fast');
 });
-jQuery('.toolbox').mouseout(function(){
-//   jQuery(this).removeClass('toolbox-open');
-//   jQuery('.toolbox-btn').fadeIn('fast');
+
+
+jQuery('.toolbox').on('click', '.toolbox-close', function() {
+   jQuery('.toolbox').removeClass('toolbox-open');
+   jQuery('.toolbox-btn').fadeIn('fast');
 });
+
 
 jQuery('.toolbox').on('click', '#open-countries', function() {
 	jQuery('.toolbox-list-countries li').each(function() {
@@ -36,6 +39,6 @@ jQuery('.toolbox-list-countries ul').append('<li><input type="checkbox" name="pa
    });
 }
 
-var css = '<style>.toolbox{color:#fff;position: fixed;background: #212121;width:200px;height: 100%;z-index:999;padding: 10px;box-shadow: 4px 0px 13px 0px #00000047;transform: translateX(-220px);transition: all .3s ease-out;}.toolbox-open{transform: translateX(0px);}.toolbox-btn{background: #2e3644;color: #fff;position: fixed;z-index: 99999;padding: 10px;border-radius: 100px;width: 20px;height: 20px;text-align: center;top: calc(50% - 10px);}.toolbox input{appearance: auto;-webkit-appearance: auto;-moz-appearance: auto;}.toolbox a{font-size: 85%;}</style>';
+var css = '<style>.toolbox{color:#fff;position: fixed;background: #212121;width:200px;height: 100%;z-index:999;padding: 10px;box-shadow: 4px 0px 13px 0px #00000047;transform: translateX(-220px);transition: all .3s ease-out;}.toolbox-open{transform: translateX(0px);}.toolbox-btn{background: #2e3644;color: #fff;position: fixed;z-index: 99999;padding: 10px;border-radius: 100px;width: 20px;height: 20px;text-align: center;top: calc(50% - 10px);}.toolbox input{appearance: auto;-webkit-appearance: auto;-moz-appearance: auto;}.toolbox a{font-size: 85%;}.toolbox-close{position:absolute;cursor: pointer;font-size: 30px;right: 2px;top: -9px;}</style>';
 
 jQuery('body').prepend(css);
