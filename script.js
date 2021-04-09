@@ -28,13 +28,20 @@ jQuery('.toolbox-list-countries').on('click', 'input', function() {
 if (pathname.indexOf('_admin')>0) jQuery('#switch-admin').html('Switch prod');
 
 jQuery('.toolbox').on('click', '#switch-admin', function() {
-	var parts = window.location.href.split("/");
-	parts[3] += "_admin";
-	var newStr = parts.join("/");
-	window.open(
-	   newStr,
-	  '_blank'
-	);
+	if (pathname.indexOf('_admin')>0) {
+		window.open(
+		   pathname.replace("_admin", ""),
+		  '_blank'
+		);
+	} else {
+		var parts = window.location.href.split("/");
+		parts[3] += "_admin";
+		var newStr = parts.join("/");
+		window.open(
+		   newStr,
+		  '_blank'
+		);
+	}
 });
 
 
