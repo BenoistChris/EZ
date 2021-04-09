@@ -27,10 +27,12 @@ jQuery('.toolbox-list-countries').on('click', 'input', function() {
 
 
 jQuery('.toolbox').on('click', '#showy', function() {
+  setInterval(function(){ 
     jQuery('a.product-light, a.product-link, .slide-content a').each(function() { 
       if ($(this).find('.divy').length<1) $(this).prepend('<div class="divy"></div>');
        $(this).find('.divy').html('Y' + $(this).attr('href').toUpperCase().match(/(?<=-Y).+?-/g)[0].slice(0, -1)); 
     });
+  }, 1000);
 });
 
 
