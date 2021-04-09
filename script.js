@@ -27,7 +27,7 @@ jQuery('.toolbox-list-countries').on('click', 'input', function() {
 
 
 jQuery('.toolbox').on('click', '#showy', function() {
-    jQuery('a.product-light, a.product-link').each(function() { $(this).prepend('Y' + $(this).attr('href').toUpperCase().match(/(?<=-Y).+?-/g)[0].slice(0, -1)); })
+    jQuery('a.product-light, a.product-link, .slide-content a').each(function() { $(this).prepend('Y' + $(this).attr('href').toUpperCase().match(/(?<=-Y).+?-/g)[0].slice(0, -1)); })
 });
 
 
