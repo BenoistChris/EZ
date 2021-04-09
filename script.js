@@ -1,6 +1,6 @@
 var pathname = window.location.pathname;
 
-var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries">Ouvrir</a></p><p class="pt-2"><a id="showy">Show Y</a></p><p class="pt-2"><a id="switch-admin">Switch admin</a></p></div><div class="toolbox-close">⨯</div></div>';
+var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries">Ouvrir</a></p><p class="pt-2"><a id="showy">Show Y</a></p><p class="pt-2"><a id="switch-admin">Switch staging</a></p></div><div class="toolbox-close">⨯</div></div>';
 var html = html + '<div class="toolbox-btn">></div>';
 
 
