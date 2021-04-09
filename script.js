@@ -1,6 +1,6 @@
 var pathname = window.location.pathname;
 
-var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries">Ouvrir</a></p></div><div class="toolbox-close">⨯</div></div>';
+var html = '<div class="toolbox"><div class="toolbox-list-countries"><ul></ul><p><a id="open-countries">Ouvrir</a></p><p><a id="showy">Show Y</a></p></div><div class="toolbox-close">⨯</div></div>';
 var html = html + '<div class="toolbox-btn">></div>';
 
 
@@ -24,6 +24,12 @@ jQuery('.toolbox-list-countries').on('click', 'input', function() {
       jQuery('#open-countries').hide();
    }
 });
+
+
+jQuery('#showy').on('click', 'input', function() {
+    jQuery('a.product-light, a.product-link').each(function() { $(this).prepend('Y' + $(this).attr('href').toUpperCase().match(/(?<=-Y).+?-/g)[0].slice(0, -1)); })
+});
+
 
 jQuery('.toolbox').on('click', '#open-countries', function() {
 	jQuery('.toolbox-list-countries li').each(function() {
