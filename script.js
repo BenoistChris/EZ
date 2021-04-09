@@ -25,6 +25,7 @@ jQuery('.toolbox-list-countries').on('click', 'input', function() {
    }
 });
 
+if (pathname.indexOf('_admidn')>0) jQuery('switch-admin').html('Switch prod');
 
 jQuery('.toolbox').on('click', '#switch-admin', function() {
 	var parts = window.location.href.split("/");
