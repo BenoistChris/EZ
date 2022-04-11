@@ -1,0 +1,53 @@
+{
+  "name": "Contribution Tool",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Helper tool",
+  "homepage_url": "https://www.dior.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "cookies",
+    "https://dior.com/*",
+    "https://www.dior.cn/*",
+    "https://www.dior.com/*",
+    "https://www.dior.cn/*",
+    "https://wwws.dior.com/*",
+    "https://cachinator.one.dior.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+	    "https://dior.com/*",
+	    "https://www.dior.cn/*",
+	    "https://www.dior.com/*",
+	    "https://www.dior.cn/*",
+    	"https://wwws.dior.com/*",
+    	"https://cachinator.one.dior.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+	    "https://dior.com/*",
+	    "https://www.dior.cn/*",
+	    "https://www.dior.com/*",
+	    "https://www.dior.cn/*",
+    	"https://wwws.dior.com/*",
+   		"https://cachinator.one.dior.com/*"
+      ],
+      "js": [
+        "js/jquery/jquery.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
