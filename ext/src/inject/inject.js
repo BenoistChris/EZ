@@ -346,7 +346,7 @@ chrome.extension.sendMessage({}, function(response) {
 		
 		//Green cookie - Start
 		if(jQuery('h1[class^="Unauthorized_title"]').length) {
-			jQuery('body').prepend('<center><h2><br>Installation du "Green Cookie" en cours<br>Veuillez patientez...</h2></center>');
+			jQuery('body').prepend('<center><h2><br>Installation du "Green Cookie" en cours<br>Veuillez patienter...</h2></center>');
 			jQuery('body').append('<iframe class="d-none" src="https://sid.one.dior.com"></iframe><iframe class="d-none" src="https://sid.one.dior.cn"></iframe>');
 			setTimeout(function(){location.reload();}, 1000);
 		}
