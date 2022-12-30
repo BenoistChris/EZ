@@ -1,6 +1,6 @@
 {
   "name": "Contribution Tool",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "Helper tool",
   "homepage_url": "https://www.dior.com",
@@ -18,6 +18,8 @@
     "https://www.dior.cn/*",
     "https://www.dior.com/*",
     "https://www.dior.cn/*",
+    "https://preprod.dior.com/*",
+    "https://preprod.dior.cn/*",
     "https://wwws.dior.com/*",
     "https://cachinator.one.dior.com/*"
   ],
@@ -28,6 +30,8 @@
 	    "https://www.dior.cn/*",
 	    "https://www.dior.com/*",
 	    "https://www.dior.cn/*",
+  	 	"https://preprod.dior.com/*",
+   		"https://preprod.dior.cn/*",
     	"https://wwws.dior.com/*",
     	"https://cachinator.one.dior.com/*"
       ],
@@ -41,6 +45,8 @@
 	    "https://www.dior.cn/*",
 	    "https://www.dior.com/*",
 	    "https://www.dior.cn/*",
+   		"https://preprod.dior.com/*",
+    	"https://preprod.dior.cn/*",
     	"https://wwws.dior.com/*",
    		"https://cachinator.one.dior.com/*"
       ],
